@@ -1,6 +1,6 @@
 # Función que regresa el verdadero valor hexadecimal.
 # Por ejemplo, si recibe un 15 devuelve f, y si recibe un número menor a 10, devuelve el número sin modificarlo
-def obtener_caracter_hexadecimal(valor):
+def obter_caracter_hexadecimal(valor):
     # Lo necesitamos como cadena
     valor = str(valor)
     equivalencias = {
@@ -17,17 +17,17 @@ def obtener_caracter_hexadecimal(valor):
         return valor
 
 
-def decimal_a_hexadecimal(decimal):
+def decimal_para_hexadecimal(decimal):
     hexadecimal = ""
     while decimal > 0:
         residuo = decimal % 16
-        verdadero_caracter = obtener_caracter_hexadecimal(residuo)
+        verdadero_caracter = obter_caracter_hexadecimal(residuo)
         hexadecimal = verdadero_caracter + hexadecimal
         decimal = int(decimal / 16)
     return hexadecimal
 
 
-def obtener_valor_real(caracter_hexadecimal):
+def obter_valor_real(caracter_hexadecimal):
     equivalencias = {
         "f": 15,
         "e": 14,
@@ -42,24 +42,24 @@ def obtener_valor_real(caracter_hexadecimal):
         return int(caracter_hexadecimal)
 
 
-def hexadecimal_a_decimal(hexadecimal):
+def hexadecimal_para_decimal(hexadecimal):
     # Convertir a minúsculas para hacer las cosas más simples
     hexadecimal = hexadecimal.lower()
     # La debemos recorrer del final al principio, así que la invertimos
     hexadecimal = hexadecimal[::-1]
     decimal = 0
-    posicion = 0
+    posicao = 0
     for digito in hexadecimal:
         # Necesitamos que nos dé un 10 para la A, un 9 para el 9, un 11 para la B, etcétera
-        valor = obtener_valor_real(digito)
-        elevado = 16 ** posicion
+        valor = obter_valor_real(digito)
+        elevado = 16 ** posicao
         equivalencia = elevado * valor
         decimal += equivalencia
-        posicion += 1
+        posicao += 1
     return decimal
 
 
-def decimal_a_octal(decimal):
+def decimal_para_octal(decimal):
     octal = ""
     while decimal > 0:
         residuo = decimal % 8
@@ -68,22 +68,22 @@ def decimal_a_octal(decimal):
     return octal
 
 
-def octal_a_decimal(octal):
+def octal_para_decimal(octal):
     decimal = 0
-    posicion = 0
+    posicao = 0
     # Invertir octal, porque debemos recorrerlo de derecha a izquierda
     # pero for in empieza de izquierda a derecha
     octal = octal[::-1]
     for digito in octal:
         valor_entero = int(digito)
-        numero_elevado = int(8 ** posicion)
+        numero_elevado = int(8 ** posicao)
         equivalencia = int(numero_elevado * valor_entero)
         decimal += equivalencia
-        posicion += 1
+        posicao += 1
     return decimal
 
 
-def decimal_a_binario(decimal):
+def decimal_para_binario(decimal):
     if decimal <= 0:
         return "0"
     # Aquí almacenamos el resultado
@@ -99,15 +99,15 @@ def decimal_a_binario(decimal):
     return binario
 
 
-def binario_a_decimal(binario):
-    posicion = 0
+def binario_para_decimal(binario):
+    posicao = 0
     decimal = 0
     # Invertir la cadena porque debemos recorrerla de derecha a izquierda
     # https://parzibyte.me/blog/2019/06/26/invertir-cadena-python/
     binario = binario[::-1]
     for digito in binario:
         # Elevar 2 a la posición actual
-        multiplicador = 2**posicion
+        multiplicador = 2**posicao
         decimal += int(digito) * multiplicador
-        posicion += 1
+        posicao += 1
     return decimal

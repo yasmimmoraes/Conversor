@@ -9,3 +9,7 @@ mensagem de erro.
 4) Caso o número esteja válido, o programa deve converter o número para a base
 de saída escolhida e exibir o resultado na tela informando a base em 
 que o número foi convertido.
+
+# BSI 2023 IFC
+
+Este repositório compreende à atividade "Calculadora de Conversão de Base", presentes tanto na disciplina de Algoritmos e Programação de Computadores I, quanto em Introdução a computação
