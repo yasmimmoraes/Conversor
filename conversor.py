@@ -1,7 +1,7 @@
 import conversoes
 
 
-def solicitar_datos_a_usuario():
+def solicitar_dados_a_usuario():
     bases_soportadas = ["2", "8", "10", "16", ]
     base_origem = input("""
 2  - Binário
@@ -37,7 +37,7 @@ def obter_numero_decimal(base_origem, numero):
         return conversoes.hexadecimal_para_decimal(numero)
 
 
-def convertir(numero, base_destino):
+def converter(numero, base_destino):
     if base_destino == "2":
         return conversoes.decimal_para_binario(numero)
     elif base_destino == "8":
@@ -49,13 +49,13 @@ def convertir(numero, base_destino):
 
 
 if __name__ == '__main__':
-    datos = solicitar_datos_a_usuario()
-    # Comprobamos si los datos son correctos
-    if datos:
-        base_origem, numero, base_destino = datos
+    dados = solicitar_dados_a_usuario()
+    # Comprobamos si los dados son correctos
+    if dados:
+        base_origem, numero, base_destino = dados
         # Para ahorrarnos código, vamos a convertir el número a decimal (sin importar la base de origen) y luego ese número
         # lo convertimos a la base de destino
         numero_decimal = obter_numero_decimal(base_origem, numero)
         # Y a ese decimal lo convertimos a la base deseada
-        resultado = convertir(numero_decimal, base_destino)
+        resultado = converter(numero_decimal, base_destino)
         print(resultado)
