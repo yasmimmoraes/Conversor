@@ -1,20 +1,6 @@
-'''Resumo: 
-Um programa em Python para converter números de uma base numérica para outra.
-1) Digite o número a ser convertido na base de entrada escolhida
-2) O programa deve validar se o número está em
-conformidade com a base escolhida e, caso contrário, deve exibir uma
-mensagem de erro.
-3) Caso o número esteja válido, o programa deve converter o número para a base
-de saída escolhida e exibir o resultado na tela informando a base em 
-que o número foi convertido.'''
-
-# Función que regresa el verdadero valor hexadecimal.
-# Por ejemplo, si recibe un 15 devuelve f, y si recibe un número menor a 10, devuelve el número sin modificarlo
-
 import conversiones
 
 
-# Si todo va bien, regresa una tupla con la base de origen, el número a convertir y la base de destino
 def solicitar_datos_a_usuario():
     bases_soportadas = ["2", "8", "10", "16", ]
     base_origen = input("""
