@@ -12,4 +12,4 @@ que o número foi convertido.
 
 # BSI 2023 IFC
 
-Este repositório compreende à atividade "Calculadora de Conversão de Base", presentes tanto na disciplina de Algoritmos e Programação de Computadores I, quanto em Introdução a computação
+Este repositório compreende à atividade "Calculadora de Conversão de Base", presente tanto na disciplina de Algoritmos e Programação de Computadores I, quanto em Introdução a Computação
