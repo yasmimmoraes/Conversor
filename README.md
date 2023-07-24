@@ -1,4 +1,4 @@
-# Conversor de Bases Numéricas
+# 👩‍💻 Conversor de Bases Numéricas
 Um programa em Python para converter números de uma base numérica para outra.
 
 1) Escolha uma base de entrada
@@ -10,6 +10,6 @@ mensagem de erro.
 de saída escolhida e exibir o resultado na tela informando a base em 
 que o número foi convertido.
 
-## BSI 2023 IFC
+## 📘 BSI 2023 IFC
 
 Este repositório compreende à atividade "Calculadora de Conversão de Base", presente tanto na disciplina de Algoritmos e Programação de Computadores I, quanto em Introdução a Computação
