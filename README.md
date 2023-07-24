@@ -14,4 +14,4 @@ que o número foi convertido.
 
 Este repositório compreende à atividade "Calculadora de Conversão de Base", presente tanto na disciplina de Algoritmos e Programação de Computadores I, quanto em Introdução a Computação
 
-Nome: Yasmim Santos Moraes    Matrícula: 2023004855
+**Nome: Yasmim Santos Moraes    Matrícula: 2023004855**
