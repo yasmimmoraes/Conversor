@@ -1,7 +1,4 @@
-# Función que regresa el verdadero valor hexadecimal.
-# Por ejemplo, si recibe un 15 devuelve f, y si recibe un número menor a 10, devuelve el número sin modificarlo
 def obter_caracter_hexadecimal(valor):
-    # Lo necesitamos como cadena
     valor = str(valor)
     equivalencias = {
         "10": "a",
@@ -43,14 +40,11 @@ def obter_valor_real(caracter_hexadecimal):
 
 
 def hexadecimal_para_decimal(hexadecimal):
-    # Convertir a minúsculas para hacer las cosas más simples
     hexadecimal = hexadecimal.lower()
-    # La debemos recorrer del final al principio, así que la invertimos
     hexadecimal = hexadecimal[::-1]
     decimal = 0
     posicao = 0
     for digito in hexadecimal:
-        # Necesitamos que nos dé un 10 para la A, un 9 para el 9, un 11 para la B, etcétera
         valor = obter_valor_real(digito)
         elevado = 16 ** posicao
         equivalencia = elevado * valor
@@ -71,8 +65,6 @@ def decimal_para_octal(decimal):
 def octal_para_decimal(octal):
     decimal = 0
     posicao = 0
-    # Invertir octal, porque debemos recorrerlo de derecha a izquierda
-    # pero for in empieza de izquierda a derecha
     octal = octal[::-1]
     for digito in octal:
         valor_entero = int(digito)
@@ -86,15 +78,10 @@ def octal_para_decimal(octal):
 def decimal_para_binario(decimal):
     if decimal <= 0:
         return "0"
-    # Aquí almacenamos el resultado
     binario = ""
-    # Mientras se pueda dividir...
     while decimal > 0:
-        # Saber si es 1 o 0
         residuo = int(decimal % 2)
-        # E ir dividiendo el decimal
         decimal = int(decimal / 2)
-        # Ir agregando el número (1 o 0) a la izquierda del resultado
         binario = str(residuo) + binario
     return binario
 
@@ -102,11 +89,8 @@ def decimal_para_binario(decimal):
 def binario_para_decimal(binario):
     posicao = 0
     decimal = 0
-    # Invertir la cadena porque debemos recorrerla de derecha a izquierda
-    # https://parzibyte.me/blog/2019/06/26/invertir-cadena-python/
     binario = binario[::-1]
     for digito in binario:
-        # Elevar 2 a la posición actual
         multiplicador = 2**posicao
         decimal += int(digito) * multiplicador
         posicao += 1

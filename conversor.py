@@ -50,12 +50,8 @@ def converter(numero, base_destino):
 
 if __name__ == '__main__':
     dados = solicitar_dados_a_usuario()
-    # Comprobamos si los dados son correctos
     if dados:
         base_origem, numero, base_destino = dados
-        # Para ahorrarnos código, vamos a convertir el número a decimal (sin importar la base de origen) y luego ese número
-        # lo convertimos a la base de destino
         numero_decimal = obter_numero_decimal(base_origem, numero)
-        # Y a ese decimal lo convertimos a la base deseada
         resultado = converter(numero_decimal, base_destino)
         print(resultado)

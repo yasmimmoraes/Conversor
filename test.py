@@ -3,7 +3,7 @@ import conversor
 import unittest
 
 
-class TestConversiones(unittest.TestCase):
+class TestConversoes(unittest.TestCase):
     def test_binario_decimal(self):
         esperado = 7
         actual = conversoes.binario_a_decimal("111")
