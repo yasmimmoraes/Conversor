@@ -6,33 +6,33 @@ import unittest
 class TestConversoes(unittest.TestCase):
     def test_binario_decimal(self):
         esperado = 7
-        actual = conversoes.binario_a_decimal("111")
-        self.assertEqual(actual, esperado)
+        atual = conversoes.binario_para_decimal("111")
+        self.assertEqual(atual, esperado)
 
     def test_decimal_binario(self):
         esperado = "111"
-        actual = conversoes.decimal_a_binario(7)
-        self.assertEqual(actual, esperado)
+        atual = conversoes.decimal_para_binario(7)
+        self.assertEqual(atual, esperado)
 
     def test_octal_decimal(self):
         esperado = 123
-        actual = conversoes.octal_a_decimal("173")
-        self.assertEqual(actual, esperado)
+        atual = conversoes.octal_para_decimal("173")
+        self.assertEqual(atual, esperado)
 
     def test_decimal_octal(self):
         esperado = "173"
-        actual = conversoes.decimal_a_octal(123)
-        self.assertEqual(actual, esperado)
+        atual = conversoes.decimal_para_octal(123)
+        self.assertEqual(atual, esperado)
 
     def test_hexadecimal_decimal(self):
         esperado = 255
-        actual = conversoes.hexadecimal_a_decimal("ff")
-        self.assertEqual(actual, esperado)
+        atual = conversoes.hexadecimal_para_decimal("ff")
+        self.assertEqual(atual, esperado)
 
     def test_decimal_hexadecimal(self):
         esperado = "ff"
-        actual = conversoes.decimal_a_hexadecimal(255)
-        self.assertEqual(actual, esperado)
+        atual = conversoes.decimal_para_hexadecimal(255)
+        self.assertEqual(atual, esperado)
 
     def test_obter_numero_decimal(self):
         valores = [
@@ -54,9 +54,9 @@ class TestConversoes(unittest.TestCase):
         ]
         for valor in valores:
             esperado = valor["esperado"]
-            actual = conversor.obter_numero_decimal(
+            atual = conversor.obter_numero_decimal(
                 valor["base"], valor["numero"])
-            self.assertEqual(actual, esperado)
+            self.assertEqual(atual, esperado)
 
 
 if __name__ == "__main__":

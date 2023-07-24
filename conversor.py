@@ -2,14 +2,14 @@ import conversoes
 
 
 def solicitar_dados_a_usuario():
-    bases_soportadas = ["2", "8", "10", "16", ]
+    bases_suportadas = ["2", "8", "10", "16", ]
     base_origem = input("""
 2  - Binário
 8  - Octal
 10 - Decimal
 16 - Hexadecimal
 Digite a base numérica de entrada: [2, 8, 10, 16]: """)
-    if base_origem not in bases_soportadas:
+    if base_origem not in bases_suportadas:
         print("ERRO! Não é possível utilizar esta base numérica")
         return
     numero = input(
@@ -20,7 +20,7 @@ Digite a base numérica de entrada: [2, 8, 10, 16]: """)
 10 - Decimal
 16 - Hexadecimal
 Escolha a base númerica de saída desejada: [2, 8, 10, 16]: """)
-    if base_destino not in bases_soportadas:
+    if base_destino not in bases_suportadas:
         print("ERRO! Não é possível utilizar esta base")
         return
     return (base_origem, numero, base_destino)

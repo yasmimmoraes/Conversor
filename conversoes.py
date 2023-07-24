@@ -18,8 +18,8 @@ def decimal_para_hexadecimal(decimal):
     hexadecimal = ""
     while decimal > 0:
         residuo = decimal % 16
-        verdadero_caracter = obter_caracter_hexadecimal(residuo)
-        hexadecimal = verdadero_caracter + hexadecimal
+        verdadeiro_caracter = obter_caracter_hexadecimal(residuo)
+        hexadecimal = verdadeiro_caracter + hexadecimal
         decimal = int(decimal / 16)
     return hexadecimal
 
@@ -67,9 +67,9 @@ def octal_para_decimal(octal):
     posicao = 0
     octal = octal[::-1]
     for digito in octal:
-        valor_entero = int(digito)
+        valor_inteiro = int(digito)
         numero_elevado = int(8 ** posicao)
-        equivalencia = int(numero_elevado * valor_entero)
+        equivalencia = int(numero_elevado * valor_inteiro)
         decimal += equivalencia
         posicao += 1
     return decimal
